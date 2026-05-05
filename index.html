@@ -1,61 +1,56 @@
-<!DOCTYPE html> <!-- Define el tipo de documento HTML5 -->
+<!DOCTYPE html> <!-- Define documento HTML5 -->
 
-<html lang="es"> <!-- Idioma de la página -->
+<html lang="es"> <!-- Idioma -->
 <head>
-    <meta charset="UTF-8"> <!-- Permite usar tildes y caracteres especiales -->
+    <meta charset="UTF-8"> <!-- Soporte para tildes -->
 
-    <!-- Título que aparece en la pestaña del navegador -->
-    <title>AtUN - Apoyo a Trámites UN</title>
+    <title>AtUN - Apoyo a Trámites UN</title> <!-- Título -->
 
     <style>
-        /* ===== ESTILO GENERAL DE LA PÁGINA ===== */
+        /* ===== ESTILO GENERAL ===== */
         body {
-            margin: 0; /* Elimina márgenes por defecto */
-            font-family: Arial, sans-serif; /* Tipo de letra */
-            background: linear-gradient(to bottom, #0f172a, #1e293b); /* Fondo degradado */
-            color: white; /* Color del texto */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+            color: white;
         }
 
-        /* ===== ENCABEZADO ===== */
+        /* ===== HEADER ===== */
         header {
-            background: #1e40af; /* Color azul */
-            padding: 30px; /* Espacio interno */
-            text-align: center; /* Centra contenido */
+            background: #1e40af;
+            padding: 30px;
+            text-align: center;
         }
 
-        /* Título principal */
         .logo {
             font-size: 42px;
         }
 
-        /* ===== ANIMACIÓN DEL PEZ ===== */
+        /* ===== PEZ ANIMADO ===== */
         .pez {
-            display: inline-block; /* Permite animación */
-            animation: mover 2s infinite alternate ease-in-out; /* Movimiento continuo */
+            display: inline-block;
+            animation: mover 2s infinite alternate ease-in-out;
         }
 
-        /* Movimiento del pez */
         @keyframes mover {
-            from { transform: translateX(0px); } /* Inicio */
-            to { transform: translateX(15px); } /* Se mueve a la derecha */
+            from { transform: translateX(0px); }
+            to { transform: translateX(15px); }
         }
 
-        /* ===== MENÚ ===== */
+        /* ===== NAV ===== */
         nav {
             background: #1e3a8a;
             padding: 12px;
             text-align: center;
         }
 
-        /* Links del menú */
         nav a {
             color: #93c5fd;
             margin: 0 15px;
-            text-decoration: none; /* Quita subrayado */
+            text-decoration: none;
             font-weight: bold;
         }
 
-        /* Efecto hover */
         nav a:hover {
             color: white;
         }
@@ -65,49 +60,56 @@
             padding: 40px;
         }
 
-        /* ===== GRID (2 COLUMNAS) ===== */
+        /* ===== GRID ===== */
         .grid {
-            display: grid; /* Activa grid */
-            grid-template-columns: 1fr 1fr; /* 2 columnas */
-            gap: 20px; /* Espacio entre tarjetas */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         /* ===== TARJETAS ===== */
         .card {
-            background: #020617; /* Fondo oscuro */
+            background: #020617;
             padding: 20px;
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra */
-            transition: 0.3s; /* Animación suave */
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
         }
 
-        /* Animación al pasar el mouse */
         .card:hover {
             transform: scale(1.03);
         }
 
-        /* Títulos de sección */
         h2 {
             border-bottom: 2px solid #3b82f6;
             padding-bottom: 5px;
         }
 
-        /* ===== BOTÓN DEL PDF ===== */
-        .btn {
-            display: inline-block; /* Permite estilo de botón */
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #2563eb; /* Azul */
+        /* ===== BOTÓN PRO ===== */
+        .btn-pro {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
+
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+
+            transition: all 0.3s ease;
         }
 
-        /* Hover del botón */
-        .btn:hover {
-            background: #1d4ed8;
+        .btn-pro:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.6);
+        }
+
+        .btn-pro:active {
+            transform: scale(0.95);
         }
 
         /* ===== FOOTER ===== */
@@ -118,10 +120,10 @@
             margin-top: 30px;
         }
 
-        /* ===== RESPONSIVE (CELULAR) ===== */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .grid {
-                grid-template-columns: 1fr; /* Una sola columna */
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -129,25 +131,25 @@
 
 <body>
 
-<!-- ===== ENCABEZADO ===== -->
+<!-- ===== HEADER ===== -->
 <header>
     <h1 class="logo">
-        AtUN <span class="pez">🐟</span> <!-- Título + pez animado -->
+        AtUN <span class="pez">🐟</span> <!-- Título con animación -->
     </h1>
     <p>Apoyo a Trámites de la Universidad Nacional</p>
 </header>
 
 <!-- ===== MENÚ ===== -->
 <nav>
-    <a href="#info">Información</a> <!-- Baja a sección info -->
-    <a href="#informe">Informe</a> <!-- Baja a sección PDF -->
+    <a href="#info">Información</a>
+    <a href="#informe">Informe</a>
 </nav>
 
-<!-- ===== SECCIÓN PRINCIPAL ===== -->
+<!-- ===== SECCIÓN INFO ===== -->
 <section id="info">
     <h2>Información del Proyecto</h2>
 
-    <div class="grid"> <!-- Contenedor en 2 columnas -->
+    <div class="grid">
 
         <div class="card">
             <h3>¿Qué es REDai?</h3>
@@ -184,7 +186,7 @@
     </div>
 </section>
 
-<!-- ===== SECCIÓN DEL INFORME PDF ===== -->
+<!-- ===== SECCIÓN INFORME ===== -->
 <section id="informe">
     <h2>Informe de Gestión del Proyecto</h2>
 
@@ -194,14 +196,14 @@
             avances, actividades realizadas y resultados obtenidos.
         </p>
 
-        <!-- BOTÓN QUE ABRE EL PDF -->
-        <a href="informe.pdf.pdf" target="_blank" class="btn">
-            📄 Ver informe en PDF
+        <!-- BOTÓN PRO BONITO -->
+        <a href="informe.pdf" target="_blank" class="btn-pro">
+            📄 Ver Informe de Gestión
         </a>
     </div>
 </section>
 
-<!-- ===== PIE DE PÁGINA ===== -->
+<!-- ===== FOOTER ===== -->
 <footer>
     <p>© 2026 Proyecto AtUN - Universidad Nacional</p>
 </footer>
