@@ -1,101 +1,88 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Define que es un documento HTML5 -->
+
+<html lang="es"> <!-- Idioma de la página -->
 <head>
-    <meta charset="UTF-8">
-    
-    <!-- Título que aparece en la pestaña del navegador -->
-    <title>AtUN - Apoyo a Trámites UN</title>
+    <meta charset="UTF-8"> <!-- Permite tildes y caracteres especiales -->
+
+    <title>AtUN - Apoyo a Trámites UN</title> <!-- Título de la pestaña -->
 
     <style>
-        /* ===== ESTILO GENERAL DE LA PÁGINA ===== */
+        /* ===== ESTILO GENERAL ===== */
         body {
-            margin: 0; /* elimina márgenes por defecto */
-            font-family: Arial, sans-serif; /* tipo de letra */
-            background: linear-gradient(to bottom, #0f172a, #1e293b); /* fondo degradado */
-            color: white; /* color del texto */
+            margin: 0; /* Quita márgenes por defecto */
+            font-family: Arial, sans-serif; /* Tipo de letra */
+            background: linear-gradient(to bottom, #0f172a, #1e293b); /* Fondo degradado */
+            color: white; /* Color del texto */
         }
 
-        /* ===== ENCABEZADO (PARTE SUPERIOR) ===== */
+        /* ===== ENCABEZADO ===== */
         header {
-            background: #1e40af; /* color azul */
-            padding: 30px; /* espacio interno */
-            text-align: center; /* centra el contenido */
+            background: #1e40af; /* Azul institucional */
+            padding: 30px; /* Espacio interno */
+            text-align: center; /* Centra el contenido */
         }
 
-        /* Tamaño del título principal */
         .logo {
-            font-size: 42px;
+            font-size: 42px; /* Tamaño del título */
         }
 
-        /* ===== ANIMACIÓN DEL PEZ ===== */
+        /* ===== PEZ ANIMADO ===== */
         .pez {
-            display: inline-block;
-            animation: mover 2s infinite alternate ease-in-out; /* movimiento automático */
+            display: inline-block; /* Permite animarlo */
+            animation: mover 2s infinite alternate ease-in-out; /* Animación continua */
         }
 
-        /* Define cómo se mueve el pez */
         @keyframes mover {
-            from { transform: translateX(0px); } /* posición inicial */
-            to { transform: translateX(15px); } /* se mueve a la derecha */
+            from { transform: translateX(0px); } /* Posición inicial */
+            to { transform: translateX(15px); } /* Se mueve a la derecha */
         }
 
-        /* ===== MENÚ DE NAVEGACIÓN ===== */
+        /* ===== MENÚ ===== */
         nav {
-            background: #1e3a8a;
+            background: #1e3a8a; /* Azul oscuro */
             padding: 12px;
             text-align: center;
         }
 
-        /* Links del menú */
         nav a {
-            color: #93c5fd;
-            margin: 0 15px;
-            text-decoration: none; /* quita subrayado */
+            color: #93c5fd; /* Color de links */
+            margin: 0 15px; /* Separación */
+            text-decoration: none; /* Quita subrayado */
             font-weight: bold;
         }
 
-        /* Efecto al pasar el mouse */
         nav a:hover {
-            color: white;
+            color: white; /* Cambio al pasar mouse */
         }
 
         /* ===== SECCIONES ===== */
         section {
-            padding: 50px;
+            padding: 40px;
         }
 
-        /* ===== TARJETAS TIPO NUBE ☁️ ===== */
+        /* ===== GRID (2 COLUMNAS) ===== */
+        .grid {
+            display: grid; /* Activa diseño en grilla */
+            grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+            gap: 20px; /* Espacio entre tarjetas */
+        }
+
+        /* ===== TARJETAS ===== */
         .card {
-            background: #020617;
-            padding: 25px;
-            margin-top: 25px;
-
-            /* Forma irregular tipo nube */
-            border-radius: 50% 30% 40% 60% / 40% 60% 30% 50%;
-
-            /* sombra */
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-
-            /* animación suave */
-            transition: 0.3s;
+            background: #020617; /* Fondo oscuro */
+            padding: 20px; /* Espacio interno */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra */
+            transition: 0.3s; /* Animación suave */
         }
 
-        /* Efecto al pasar el mouse */
         .card:hover {
-            transform: scale(1.03); /* crece un poco */
+            transform: scale(1.03); /* Se agranda al pasar el mouse */
         }
 
-        /* Títulos de cada sección */
         h2 {
-            border-bottom: 2px solid #3b82f6;
+            border-bottom: 2px solid #3b82f6; /* Línea debajo del título */
             padding-bottom: 5px;
-        }
-
-        /* Imágenes */
-        img {
-            max-width: 100%; /* se adapta al tamaño */
-            border-radius: 20px; /* bordes redondeados */
-            margin-top: 15px;
         }
 
         /* ===== PIE DE PÁGINA ===== */
@@ -105,6 +92,13 @@
             padding: 15px;
             margin-top: 30px;
         }
+
+        /* ===== RESPONSIVE (CELULAR) ===== */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr; /* Una sola columna en celular */
+            }
+        }
     </style>
 </head>
 
@@ -112,61 +106,52 @@
 
 <!-- ===== ENCABEZADO ===== -->
 <header>
-    <!-- Título principal con pez animado -->
     <h1 class="logo">
-        AtUN <span class="pez">🐟</span>
+        AtUN <span class="pez">🐟</span> <!-- Título + pez animado -->
     </h1>
-    <p>Apoyo a Trámites de la Universidad Nacional</p>
+    <p>Apoyo a Trámites de la Universidad Nacional</p> <!-- Subtítulo -->
 </header>
 
 <!-- ===== MENÚ ===== -->
 <nav>
-    <a href="#redai">REDai</a>
-    <a href="#mision">Misión</a>
-    <a href="#quienes">¿Quiénes somos?</a>
-    <a href="#vision">Visión</a>
+    <a href="#info">Información</a> <!-- Link que baja a la sección -->
 </nav>
 
-<!-- ===== SECCIÓN REDai ===== -->
-<section id="redai">
-    <h2>¿Qué es REDai?</h2>
-    <div class="card">
-        <p>
-            Proyecto académico que fortalece la permanencia estudiantil...
-        </p>
+<!-- ===== SECCIÓN PRINCIPAL ===== -->
+<section id="info">
+    <h2>Información del Proyecto</h2>
 
-        <!-- Imagen -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Students_studying.jpg/640px-Students_studying.jpg">
-    </div>
-</section>
+    <!-- Contenedor de tarjetas -->
+    <div class="grid">
 
-<!-- ===== MISIÓN ===== -->
-<section id="mision">
-    <h2>Misión</h2>
-    <div class="card">
-        <p>
-            Fortalecer la autonomía estudiantil brindando orientación...
-        </p>
-    </div>
-</section>
+        <div class="card">
+            <h3>¿Qué es REDai?</h3>
+            <p>
+                Proyecto académico que fortalece la permanencia estudiantil...
+            </p>
+        </div>
 
-<!-- ===== QUIÉNES SOMOS ===== -->
-<section id="quienes">
-    <h2>¿Quiénes somos?</h2>
-    <div class="card">
-        <p>
-            Somos un equipo interdisciplinario que ofrece asesorías...
-        </p>
-    </div>
-</section>
+        <div class="card">
+            <h3>Misión</h3>
+            <p>
+                Fortalecer la autonomía estudiantil brindando orientación clara...
+            </p>
+        </div>
 
-<!-- ===== VISIÓN ===== -->
-<section id="vision">
-    <h2>Visión</h2>
-    <div class="card">
-        <p>
-            Ser referente en orientación de trámites académicos...
-        </p>
+        <div class="card">
+            <h3>¿Quiénes somos?</h3>
+            <p>
+                Somos un equipo interdisciplinario que ofrece asesorías...
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Visión</h3>
+            <p>
+                Ser referente en orientación de trámites académicos...
+            </p>
+        </div>
+
     </div>
 </section>
 
