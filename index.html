@@ -2,86 +2,124 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>AtUN - Apoyo a Trámites UN</title>
 
     <style>
+        /* ===== ESTILO GENERAL DE LA PÁGINA ===== */
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #0f172a, #1e293b);
-            color: white;
+            margin: 0; /* elimina márgenes por defecto */
+            font-family: Arial, sans-serif; /* tipo de letra */
+            background: linear-gradient(to bottom, #0f172a, #1e293b); /* fondo degradado */
+            color: white; /* color del texto */
         }
 
+        /* ===== ENCABEZADO (PARTE SUPERIOR) ===== */
         header {
-            background: #1e40af;
-            padding: 30px;
-            text-align: center;
+            background: #1e40af; /* color azul */
+            padding: 30px; /* espacio interno */
+            text-align: center; /* centra el contenido */
         }
 
+        /* Tamaño del título principal */
         .logo {
-            font-size: 40px;
+            font-size: 42px;
         }
 
+        /* ===== ANIMACIÓN DEL PEZ ===== */
         .pez {
             display: inline-block;
-            animation: mover 2s infinite alternate ease-in-out;
+            animation: mover 2s infinite alternate ease-in-out; /* movimiento automático */
         }
 
+        /* Define cómo se mueve el pez */
         @keyframes mover {
-            from { transform: translateX(0px); }
-            to { transform: translateX(15px); }
+            from { transform: translateX(0px); } /* posición inicial */
+            to { transform: translateX(15px); } /* se mueve a la derecha */
         }
 
+        /* ===== MENÚ DE NAVEGACIÓN ===== */
         nav {
             background: #1e3a8a;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
         }
 
+        /* Links del menú */
         nav a {
             color: #93c5fd;
             margin: 0 15px;
-            text-decoration: none;
+            text-decoration: none; /* quita subrayado */
             font-weight: bold;
         }
 
+        /* Efecto al pasar el mouse */
         nav a:hover {
             color: white;
         }
 
+        /* ===== SECCIONES ===== */
         section {
-            padding: 40px;
+            padding: 50px;
         }
 
+        /* ===== TARJETAS TIPO NUBE ☁️ ===== */
         .card {
             background: #020617;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
+            padding: 25px;
+            margin-top: 25px;
+
+            /* Forma irregular tipo nube */
+            border-radius: 50% 30% 40% 60% / 40% 60% 30% 50%;
+
+            /* sombra */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+
+            /* animación suave */
+            transition: 0.3s;
         }
 
+        /* Efecto al pasar el mouse */
+        .card:hover {
+            transform: scale(1.03); /* crece un poco */
+        }
+
+        /* Títulos de cada sección */
         h2 {
             border-bottom: 2px solid #3b82f6;
             padding-bottom: 5px;
         }
 
+        /* Imágenes */
+        img {
+            max-width: 100%; /* se adapta al tamaño */
+            border-radius: 20px; /* bordes redondeados */
+            margin-top: 15px;
+        }
+
+        /* ===== PIE DE PÁGINA ===== */
         footer {
             background: #020617;
             text-align: center;
             padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
 
+<!-- ===== ENCABEZADO ===== -->
 <header>
+    <!-- Título principal con pez animado -->
     <h1 class="logo">
         AtUN <span class="pez">🐟</span>
     </h1>
     <p>Apoyo a Trámites de la Universidad Nacional</p>
 </header>
 
+<!-- ===== MENÚ ===== -->
 <nav>
     <a href="#redai">REDai</a>
     <a href="#mision">Misión</a>
@@ -89,46 +127,50 @@
     <a href="#vision">Visión</a>
 </nav>
 
+<!-- ===== SECCIÓN REDai ===== -->
 <section id="redai">
     <h2>¿Qué es REDai?</h2>
     <div class="card">
         <p>
-            Proyecto académico que fortalece la permanencia estudiantil, mejora la experiencia universitaria 
-            y apoya el rendimiento mediante el desarrollo colaborativo de una iniciativa estudiantil.
+            Proyecto académico que fortalece la permanencia estudiantil...
         </p>
+
+        <!-- Imagen -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Students_studying.jpg/640px-Students_studying.jpg">
     </div>
 </section>
 
+<!-- ===== MISIÓN ===== -->
 <section id="mision">
     <h2>Misión</h2>
     <div class="card">
         <p>
-            Fortalecer la autonomía estudiantil brindando orientación clara en trámites académicos, 
-            promoviendo el bienestar, las decisiones informadas y la permanencia universitaria.
+            Fortalecer la autonomía estudiantil brindando orientación...
         </p>
     </div>
 </section>
 
+<!-- ===== QUIÉNES SOMOS ===== -->
 <section id="quienes">
     <h2>¿Quiénes somos?</h2>
     <div class="card">
         <p>
-            Somos un equipo interdisciplinario que ofrece asesorías, talleres y recursos para que 
-            los estudiantes conozcan sus derechos y actúen con seguridad.
+            Somos un equipo interdisciplinario que ofrece asesorías...
         </p>
     </div>
 </section>
 
+<!-- ===== VISIÓN ===== -->
 <section id="vision">
     <h2>Visión</h2>
     <div class="card">
         <p>
-            Ser referente en orientación de trámites académicos, promoviendo acompañamiento, 
-            corresponsabilidad, autonomía y éxito en la trayectoria estudiantil universitaria.
+            Ser referente en orientación de trámites académicos...
         </p>
     </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
     <p>© 2026 Proyecto AtUN - Universidad Nacional</p>
 </footer>
