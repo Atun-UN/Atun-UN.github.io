@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>AtUN - Apoyo a Trámites UN</title>
+
     <style>
         body {
             margin: 0;
@@ -10,37 +11,59 @@
             background: linear-gradient(to bottom, #0f172a, #1e293b);
             color: white;
         }
+
         header {
-            background: #1e40af; /* Azul institucional */
+            background: #1e40af;
             padding: 30px;
             text-align: center;
         }
+
+        .logo {
+            font-size: 40px;
+        }
+
+        .pez {
+            display: inline-block;
+            animation: mover 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes mover {
+            from {
+                transform: translateX(0px);
+            }
+            to {
+                transform: translateX(15px);
+            }
+        }
+
         nav {
             background: #1e3a8a;
             padding: 10px;
             text-align: center;
         }
+
         nav a {
             color: #93c5fd;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
+
         nav a:hover {
             color: white;
         }
+
         section {
             padding: 40px;
         }
+
         .card {
             background: #020617;
             padding: 20px;
             border-radius: 12px;
             margin-top: 20px;
         }
-        .logo {
-            font-size: 40px;
-        }
+
         footer {
             background: #020617;
             text-align: center;
@@ -48,10 +71,13 @@
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1 class="logo">AtUN 🐟</h1>
+    <h1 class="logo">
+        AtUN <span class="pez">🐟</span>
+    </h1>
     <p>Apoyo a Trámites de la Universidad Nacional</p>
 </header>
 
